@@ -4,6 +4,15 @@ import { useSelector } from "react-redux";
 import Header from "./Header";
 
 export default function ProductList() {
+  // const dispatch = useDispatch();
+  // const products = useSelector((state) => state.products.items);
+  // const status = useSelector((state) => state.products.status);
+
+  // useEffect(() => {
+  //   if (status === 'idle') {
+  //     dispatch(fetchProducts());
+  //   }
+  // }, [status, dispatch]);
   const products = [
     {
       id: 1,
