@@ -77,14 +77,12 @@ export default function Header() {
             />
           </div>
 
-          {/* Cart Icon */}
           <IconButton color="inherit" onClick={() => setDrawerOpen(true)}>
             <Badge badgeContent={cartCount} color="secondary">
               <ShoppingCartIcon />
             </Badge>
           </IconButton>
 
-          {/* User Profile Initial */}
           <IconButton
             color="inherit"
             onClick={(e) => setAnchorEl(e.currentTarget)}
@@ -96,7 +94,6 @@ export default function Header() {
         </Toolbar>
       </AppBar>
 
-      {/* Cart Drawer */}
       <Drawer
         anchor="right"
         open={drawerOpen}
@@ -144,7 +141,6 @@ export default function Header() {
         </Box>
       </Drawer>
 
-      {/* User Menu */}
       <Menu
         anchorEl={anchorEl}
         open={userMenuOpen}
