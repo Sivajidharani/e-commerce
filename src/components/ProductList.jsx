@@ -1,6 +1,7 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 import { useSelector } from "react-redux";
+import Header from "./Header";
 
 export default function ProductList() {
   const products = [
@@ -31,6 +32,7 @@ export default function ProductList() {
   );
 
   return (
+    <><Header />
     <div style={{ display: "flex", flexWrap: "wrap" }}>
       {filteredProducts.length > 0 ? (
         filteredProducts.map((p) => <ProductCard key={p.id} product={p} />)
@@ -39,6 +41,6 @@ export default function ProductList() {
           No items found
         </div>
       )}
-    </div>
+    </div></>
   );
 }

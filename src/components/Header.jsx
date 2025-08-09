@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import { useNavigate } from "react-router";
 import {
   AppBar,
   Toolbar,
@@ -23,6 +24,7 @@ import { setSearchTerm } from "../redux/searchSlice";
 import debounce from "lodash.debounce";
 
 export default function Header() {
+  let navigate = useNavigate();
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
   const cartCount = cartItems.reduce((sum, i) => sum + i.quantity, 0);
@@ -153,7 +155,7 @@ export default function Header() {
           {user.name}
         </MenuItem>
         <MenuItem>{user.email}</MenuItem>
-        <MenuItem onClick={() => alert("Logging out...")}>Logout</MenuItem>
+        <MenuItem onClick={() => navigate('/login')}>Logout</MenuItem>
       </Menu>
     </>
   );
